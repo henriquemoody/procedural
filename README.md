@@ -67,15 +67,15 @@ Módulos podem ser interpretados como "setores" do site. Por, exemplo, geralment
 
 Neste modelo de site, as páginas principais são as páginas do módulo "default" e são acessadas da seguinte forma, por exemplo:
 
-> http://www.exemplo.com.br/pagina
-> http://www.exemplo.com.br/subpagina
-> http://www.exemplo.com.br/pagina?parametro=valor
+* http://www.exemplo.com.br/pagina
+* http://www.exemplo.com.br/subpagina
+* http://www.exemplo.com.br/pagina?parametro=valor
 
 Você pode criar quantos módulos desejar e eles serão acessados da seguinte forma, por exemplo:
 
-> http://www.exemplo.com.br/modulo/pagina
-> http://www.exemplo.com.br/modulo/subpagina
-> http://www.exemplo.com.br/modulo/pagina?parametro=valor
+* http://www.exemplo.com.br/modulo/pagina
+* http://www.exemplo.com.br/modulo/subpagina
+* http://www.exemplo.com.br/modulo/pagina?parametro=valor
 
 Portanto, se você cria um módulo de nome admin, você acessará as páginas dele a partir da url http://www.exemplo.com.br/admin
 
@@ -99,11 +99,11 @@ Arquivo com o layout da módulo.
 
 Então, se você quiser criar um módulo chamado clientes, deve criar os seguintes arquivos e pastas:
 
-> modules/clientes
-> modules/clientes/pages
-> modules/clientes/pages/index.php
-> modules/clientes/settings.php
-> modules/clientes/template.php
+* modules/clientes
+* modules/clientes/pages
+* modules/clientes/pages/index.php
+* modules/clientes/settings.php
+* modules/clientes/template.php
 
 ### Arquivos de layout
 
