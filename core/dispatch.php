@@ -19,12 +19,12 @@ if (!file_exists($filename)) {
 }
 $functions = BASE_PATH . "/functions";
 if (($dh = opendir($functions))) {
-	while (($function = readdir($dh)) !== false) {
-		$function = $functions .'/' . $function;
-		if (!is_dir($function)) {
-    		require_once($function);
-		}
-	}
-	closedir($dh);
+while (($function = readdir($dh)) !== false) {
+    $function = $functions .'/' . $function;
+        if (!is_dir($function)) {
+            require_once($function);
+        }
+    }
+    closedir($dh);
 }
 unset($copy);
