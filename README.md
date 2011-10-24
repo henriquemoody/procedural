@@ -33,33 +33,36 @@ Se for igual à TRUE permite layouts (templates), se for FALSE não permite.
 Array multidimensional que pode conter o conteúdo da navegação do site.
 Exemplo de navegação
 
-	$conf['navigation'] = array(
-	    array(
-	        'title'  => 'Início',
-	        'page'   => 'index',
-	        'module' => 'default' //Se não existir "module" define "default" por padrão
-	    ),
-	    array(
-	        'title'  => 'Produtos',
-	        'page'   => 'produtos',
-	        'module' => 'default',
-	        'pages'  => array( //Subpáginas
-	            array(
-	                'title' => 'Eletrônicos',
-	                'page'  => 'eletronicos'
-	            ),
-	            array(
-	                'title' => 'Moveis',
-	                'page'  => 'moveis'
-	            )
-	        ),
-	    ),
-	    array(
-	        'title' => 'Contato',
-	        'page'  => 'contato',
-	        'module' => 'default'
-	    )
-	);
+```php
+<?php
+$conf['navigation'] = array(
+    array(
+        'title'  => 'Início',
+        'page'   => 'index',
+        'module' => 'default' //Se não existir "module" define "default" por padrão
+    ),
+    array(
+        'title'  => 'Produtos',
+        'page'   => 'produtos',
+        'module' => 'default',
+        'pages'  => array( //Subpáginas
+            array(
+                'title' => 'Eletrônicos',
+                'page'  => 'eletronicos'
+            ),
+            array(
+                'title' => 'Moveis',
+                'page'  => 'moveis'
+            )
+        ),
+    ),
+    array(
+        'title' => 'Contato',
+        'page'  => 'contato',
+        'module' => 'default'
+    )
+);
+```
 
 ## Módulos
 
