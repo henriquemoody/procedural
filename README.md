@@ -30,7 +30,7 @@ Contém o título padrão do site.
 Contém o separador para os títulos, pois por padrão o título do layout é o título padrão, seguido do título da página, seguido do título subpágina.
 
 ### `$conf['layout']`
-Se for igual à TRUE permite layouts (templates), se for FALSE não permite.
+Se for igual à `TRUE` permite layouts (templates), se for `FALSE` não permite.
 
 ### `$conf['navigation']`
 Array multidimensional que pode conter o conteúdo da navegação do site.
