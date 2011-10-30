@@ -18,21 +18,24 @@ Pastas com módulos do site.
 
 ## Arquivo core/settings.php
 
-Este arquivo contém as configurações gerais para o site inteiro. Basicamente á uma variável do tipo array chamada $conf que contém dados referentes as configurações.
-Você pode adicionar quaisquer chaves que quiser na variável $conf, mas existem algumas chaves reservadas.
+Este arquivo contém as configurações gerais para o site inteiro. Basicamente á uma variável do tipo array chamada `$conf` que contém dados referentes as configurações.
+Você pode adicionar quaisquer chaves que quiser na variável `$conf`, mas existem algumas chaves reservadas.
 
 ## Chaves reservadas do array $conf
 
 ### `$conf['title']`
 Contém o título padrão do site.
+
 ### `$conf['title_separator']`
 Contém o separador para os títulos, pois por padrão o título do layout é o título padrão, seguido do título da página, seguido do título subpágina.
+
 ### `$conf['layout']`
 Se for igual à TRUE permite layouts (templates), se for FALSE não permite.
+
 ### `$conf['navigation']`
 Array multidimensional que pode conter o conteúdo da navegação do site.
-Exemplo de navegação
 
+#### Exemplo de navegação
 ```php
 <?php
 $conf['navigation'] = array(
@@ -67,7 +70,6 @@ $conf['navigation'] = array(
 ## Módulos
 
 Módulos podem ser interpretados como "setores" do site. Por, exemplo, geralmente, em um mesmo domínio, http://www.exemplo.com.br/ existem as páginas principais, que, geralmente, todos podem acessar, e as páginas de painel administrativo, uma área restrita para clientes, etc.
-
 Neste modelo de site, as páginas principais são as páginas do módulo "default" e são acessadas da seguinte forma, por exemplo:
 
 * http://www.exemplo.com.br/pagina
@@ -88,18 +90,20 @@ Para criar um módulo você deve seguir a seguinte estrutura de arquivos.
 
 #### modules/modulo
 Criar uma pasta na pasta "modules" com o nome do módulo desejado.
+
 #### modules/admin/pages/
 Criar uma pasta chamada "pages" dentro da pasta com o nome do módulo. Nesta pasta é que estarão as páginas do módulo.
+
 #### modules/admin/pages/index.php
 Página inicial do módulo, que aparece quando o módulo é acessado diretamente.
+
 #### modules/admin/settings.php
 Arquivo com configurações específicas para o módulo. 
-Você pode por exemplo sobreescrever valores do array $conf, sendo assim você pode criar uma navegação diferente para cada módulo, fazer com que um módulo não possua layout (template), etc. 
-Este arquivo é executado antes de qualquer página do módulo, portanto você pode
+Você pode por exemplo sobreescrever valores do array `$conf`, sendo assim você pode criar uma navegação diferente para cada módulo, fazer com que um módulo não possua layout (template), etc. 
+Este arquivo é executado antes de qualquer página do módulo.
+
 #### modules/admin/template.php
 Arquivo com o layout da módulo.
-
-
 Então, se você quiser criar um módulo chamado clientes, deve criar os seguintes arquivos e pastas:
 
 * modules/clientes
@@ -114,19 +118,20 @@ Para criar os layout dos módulos, você pode usar algumas variáveis específic
 
 #### `$title`
 Conteúdo do título da página, que é o título do site, seguido do título da página, seguido do título da subpágina.
+
 #### `$navigation`
-Contém a navegação formatada, baseada no array $conf['navigation']. Esta navegação é formatada em forma de lista com links, e possui algumas classes (CSS) para manipulação de estilos na navegação, tal como a página atual.
+Contém a navegação formatada, baseada no array `$conf['navigation']`. Esta navegação é formatada em forma de lista com links, e possui algumas classes (CSS) para manipulação de estilos na navegação, tal como a página atual.
+
 #### `$breadcrumbs`
-Contém breadcrumbs formatados, baseada no array $conf['navigation'] e na página atual.
+Contém breadcrumbs formatados, baseada no array `$conf['navigation']` e na página atual.
+
 #### `$content`
 Conteúdo da página atual.
 
 ### Páginas de erro
-
 Existe um módulo padrão para erros modules/error que permite que você personalise suas mensagens de erro como quiser
 
 ## Fluxo do modelo do site
-
 Para explicar como funciona o modelos, vamos dar um exemplo.
 Ao requisitar a página http://www.exemplo.com.br/admin/postagem/cadastrar
 
